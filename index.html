@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ctf-8"></meta>
+        <link rel="icon" href="Home.ico" type="image/x-icon"></link>
+        <link rel="shortcut icon" href="Home.ico" type="image/x-icon"></link>
+        <title>Creeper BOT</title>
+        <style type="text/css">
+            @font-face {
+            font-family: font1;
+            src: url(jf-openhuninn-1.1.ttf);
+            }
+            .body{
+                background-color: skyblue;
+                margin: 0px;
+                font-family: font1;
+            }
+            .img1{
+                display: block;
+            }
+            .div1{
+                font-family: font1;
+                text-align: center;
+                background-color: #0d0057;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .button{
+                font-family: font1;
+                width: 130px;
+                height: 40px;
+                font-size: 20px;
+                background-color: #0d0057;
+                border: 2px solid #fdeca6;
+                border-radius: 22px;
+                color: white;
+                cursor: pointer;
+                outline: none;
+            }
+                .button:hover{
+                    background-color: #fdeca6;
+                    color: black;
+                    transition: 0.5s;
+                }
+            .div2{
+                text-align: center;
+            }
+            @media screen and (max-width: 600px) {
+                .div1{
+                    width: auto;
+                }
+                .img1{
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body class="body">
+        <img class="img1" src="Home.jpg" ></img>
+        <div class="div1">
+            <button id="but1" class="button">首頁</button>
+            <button id="but2" class="button">作者介紹</button>
+            <button id="but3" class="button">指令介紹</button>
+            <button id="but4" class="button">DISCORD群</button>
+            <button id="but5" class="button">邀請BOT</button>
+        </div>
+        <div id="div2" class="div2" style="text-align: center;">
+            <h3>歡迎使用Creeper BOT!!</h3>
+        </div>
+        <script type="text/javascript">
+            document.getElementById("but1").onclick = function() {
+                document.getElementById("div2").innerHTML=`<h1 style="color: #88001b;">首頁</h1>`
+            }
+            document.getElementById("but2").onclick = function() {
+                document.getElementById("div2").innerHTML=`<h1 style="color: #88001b;" >作者介紹</h1><h4>作者:Creeper Hank</h4><img src=My.jpg></img><h4>我是個編程式的新手</h4><h4>我嘗試做了Discord BOT</h4><h4>也就開發了Creeper BOT</h4><h4>你們的支持是我最大的動力</h4><h4>希望大家可以支持這個BOT</h4><h4>也可以提供給我意見喔</h4>`
+            }
+            document.getElementById("but3").onclick = function() {
+                document.getElementById("div2").innerHTML=`<h1 style="color: #88001b;" >指令介紹</h1><h3 style="color: #7824ac;">say embed 嵌入文字</h3><h4>用法 s|S|say|se|sayembed [內容]</h4><h3 style="color: #7824ac;">ping 當前延遲</h3><h4>用法 ping</h4><h2 style="color: #000000;">--------------------以下為管理員使用--------------------</h2><h3 style="color: #7824ac;">vote 投票</h3><h4>用法(type-1) v [問題]</h4><h4>用法(type-2) v [問題] [選項]</h4></h4><h3 style="color: #7824ac;">clear 清除訊息</h3><h4>用法 clear|c|purge [訊息數量]</h4>`
+            }
+            document.getElementById("but4").onclick = function() {
+                document.getElementById("div2").innerHTML=`<h1 style="color: #88001b;">Discord群</h1>`
+            }
+            document.getElementById("but5").onclick = function() {
+                document.getElementById("div2").innerHTML=`<h1 style="color: #88001b;">邀請BOT</h1>`
+            }
+        </script>
+    </body>
+</html>
