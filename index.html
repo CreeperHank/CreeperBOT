@@ -37,6 +37,7 @@
                 color: white;
                 cursor: pointer;
                 outline: none;
+                display: inline-block;
             }
                 .button:hover{
                     background-color: #fdeca6;
@@ -59,15 +60,15 @@
     <body class="body">
         <img class="img1" src="Home.jpg" ></img>
         <div class="div1">
-            <button id="but1" class="button">首頁</button>
+            <h3 style="display: inline-block;color: white;" id="s"></h3>
+            <button nowrap id="but1" class="button">首頁</button>
             <button id="but2" class="button">作者介紹</button>
             <button id="but3" class="button">指令介紹</button>
             <button id="but4" class="button">DISCORD群</button>
             <button id="but5" class="button">邀請BOT</button>
         </div>
         <div id="div2" class="div2" style="text-align: center;">
-            <h3>歡迎使用Creeper BOT!!</h3>
-            <h3 id="s"></h3>
+            <h1 style="color: #88001b;">首頁</h1>
         </div>
         <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
         <script type="text/javascript">
@@ -105,10 +106,10 @@
                 document.getElementById("div2").innerHTML=`<h1 style="color: #88001b;" >指令介紹</h1><h3 style="color: #7824ac;">say embed 嵌入文字</h3><h4>用法 s|S|say|se|sayembed [內容]</h4><h3 style="color: #7824ac;">ping 當前延遲</h3><h4>用法 ping</h4><h2 style="color: #000000;">--------------------以下為管理員使用--------------------</h2><h3 style="color: #7824ac;">vote 投票</h3><h4>用法(type-1) v [問題]</h4><h4>用法(type-2) v [問題] [選項]</h4></h4><h3 style="color: #7824ac;">clear 清除訊息</h3><h4>用法 clear|c|purge [訊息數量]</h4>`
             }
             document.getElementById("but4").onclick = function() {
-                document.getElementById("div2").innerHTML=`<h1 style="color: #88001b;">Discord群</h1>`
+                window.location.href="https://discord.com/invite/PFcqkQD";
             }
             document.getElementById("but5").onclick = function() {
-                document.getElementById("div2").innerHTML=`<h1 style="color: #88001b;">邀請BOT</h1><button></button>`
+                window.location.href="https://discord.com/oauth2/authorize?client_id=709344023956946965&permissions=8&scope=bot";
             }
         </script>
     </body>
