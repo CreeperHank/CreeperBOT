@@ -67,8 +67,33 @@
         </div>
         <div id="div2" class="div2" style="text-align: center;">
             <h3>歡迎使用Creeper BOT!!</h3>
+            <h3 id="s"></h3>
         </div>
         <script type="text/javascript">
+            var appUrl = "https://script.google.com/macros/s/AKfycbyoL0x_I79-JfMizz4Sndd2-QFTVpsAE5twrIBZkDl7o9lZbHY/exec",
+                sheetsUrl = "https://docs.google.com/spreadsheets/d/1Y-aiBpJrgyzRDKKXrnLrKYfJPHy00tfGhHiKB9CvMcs/edit#gid=0",
+                sheetName = "工作表1",
+                startRow = "1",
+                startColumn = "1",
+                show = $('#show');
+                
+            var parameter = {};
+            window.onload=ShowHello;
+            function ShowHello(){
+                parameter = {
+                    url: sheetsUrl,
+                    name: sheetName,
+                    startRow: startRow*1,
+                    startColumn: startColumn*1
+                    };
+                    $.get(appUrl, parameter, function(data) {
+                        if(!data){
+                            s.text('無資料');
+                        }else{
+                            s.text(data);
+                        }
+                    });
+            }
             document.getElementById("but1").onclick = function() {
                 document.getElementById("div2").innerHTML=`<h1 style="color: #88001b;">首頁</h1>`
             }
@@ -82,7 +107,7 @@
                 document.getElementById("div2").innerHTML=`<h1 style="color: #88001b;">Discord群</h1>`
             }
             document.getElementById("but5").onclick = function() {
-                document.getElementById("div2").innerHTML=`<h1 style="color: #88001b;">邀請BOT</h1>`
+                document.getElementById("div2").innerHTML=`<h1 style="color: #88001b;">邀請BOT</h1><button></button>`
             }
         </script>
     </body>
