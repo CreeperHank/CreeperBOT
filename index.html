@@ -69,13 +69,14 @@
             <h3>歡迎使用Creeper BOT!!</h3>
             <h3 id="s"></h3>
         </div>
+        <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
         <script type="text/javascript">
             var appUrl = "https://script.google.com/macros/s/AKfycbyoL0x_I79-JfMizz4Sndd2-QFTVpsAE5twrIBZkDl7o9lZbHY/exec",
                 sheetsUrl = "https://docs.google.com/spreadsheets/d/1Y-aiBpJrgyzRDKKXrnLrKYfJPHy00tfGhHiKB9CvMcs/edit#gid=0",
                 sheetName = "工作表1",
                 startRow = "1",
                 startColumn = "1",
-                show = $('#show');
+                show = $('#s');
                 
             var parameter = {};
             window.onload=ShowHello;
@@ -88,9 +89,9 @@
                     };
                     $.get(appUrl, parameter, function(data) {
                         if(!data){
-                            s.text('無資料');
+                            show.text('無資料');
                         }else{
-                            s.text(data);
+                            show.text(data);
                         }
                     });
             }
